@@ -15,7 +15,7 @@ Usage
 -----
  * Compiling: `tqc helloworld` (In the same directory as the 'helloworld.asm'. It's case insensitive.)
  * Compiling & Execution: `tqr helloworld`
- * Compiling & Debugging: `tqd helloworld`
+ * Debugging: `tqd helloworld`
 
 Troubleshooting
 ---------------
