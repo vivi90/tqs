@@ -17,6 +17,11 @@ Usage
  * Compiling & Execution: `tqr helloworld`
  * Compiling & Debugging: `tqd helloworld`
 
+Troubleshooting
+---------------
+If you discover a message, that you terminal doen't provide enough lines or the debugger doesn't render properly:
+Set you terminal to 80 columns and 26 rows to solve it.
+
 License
 -------
 This project is free software under the terms of the GNU General Public License v3 as published by the Free Software Foundation.
