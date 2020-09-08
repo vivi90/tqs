@@ -4,7 +4,7 @@ This are Linux shell scripts for compiling, debugging and execution of TASM code
 
 Install notes
 -------------
-1. Install DOSEMU and run it one first time.
+1. Install [DOSEMU](http://www.dosemu.org) and run it one first time.
 2. Download TASM 1.4 from [TechApple.net](https://techapple.net/2013/01/tasm-windows-7-windows-8-full-screen-64bit-version-single-installer/) and extract it directly.
 3. Copy the content of the 'Tasm' folder into the desired destination.
 4. Copy the content of this repository into the same directory.
@@ -17,10 +17,14 @@ Usage
  * Compiling & Execution: `tqr helloworld`
  * Debugging: `tqd helloworld`
 
+Options
+-------
+ * `x`: Runs in xterm with mouse support.
+
 Troubleshooting
 ---------------
-If you discover a message, that you terminal doen't provide enough lines or the debugger doesn't render properly:
-Set you terminal to 80 columns and 26 rows to solve it.
+ * If you discover a message, that you terminal doen't provide enough lines or the debugger doesn't render properly: Set you terminal to 80 columns and 26 rows to solve it.
+ * If you discover a broken TASM UI: Change the terminal width until it works.
 
 License
 -------

@@ -1,5 +1,9 @@
 #!/bin/bash
-PROJECT="$(echo "$1" | awk '{print tolower($0)}')"
-tqc $PROJECT
-dosemu -D-a -I 'keystroke exitemu' -E $PROJECT.com
+if [ "$1" = "x" ]; then
+    tqc $2
+    dosemu -m -I 'keystroke exitemu' -E $2.exe
+else
+    tqc $1
+    dosemu -t -I 'keystroke exitemu' -E $1.exe
+fi
 exit 0

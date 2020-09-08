@@ -1,8 +1,15 @@
 #!/bin/bash
-WD="$HOME/.dosemu/drive_c/projects/$1"
-if [ ! -d $WD ]; then
-    ln -sf "$(pwd)" $WD
+if [ "$1" = "x" ]; then
+    WD="$HOME/.dosemu/drive_c/projects/$2"
+    if [ ! -d $WD ]; then
+        ln -sf "$(pwd)" $WD
+    fi
+    dosemu -m -I 'keystroke "cd C:\\PROJECTS\\'$2'\rC:\\TASM\\TC.BAT '$2'\rexitemu\r"'
+else
+    WD="$HOME/.dosemu/drive_c/projects/$1"
+    if [ ! -d $WD ]; then
+        ln -sf "$(pwd)" $WD
+    fi
+    dosemu -t -I 'keystroke "cd C:\\PROJECTS\\'$1'\rC:\\TASM\\TC.BAT '$1'\rexitemu\r"'
 fi
-dosemu -t -m -D-a -I 'keystroke "cd C:\\PROJECTS\\'$1'\rC:\\TASM\\TASM.EXE /zi '$1'\rC:\\TASM\\TLINK.EXE /v /3 /t '$1'\rexitemu\r"'
 exit 0
-
